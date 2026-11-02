@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goldcar | Car Hire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER SECTION: top navigation, logo and menu buttons -->
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Goldcar home">G<span>.</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#offers">Offers</a><a href="#locations">Locations</a><a href="#why-us">Why Goldcar?</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="languageBtn" aria-label="Change language">EN · £</button>
+      <button class="icon-button" id="accountBtn">Enter</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU SECTION: appears when the menu button is clicked -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="#offers">Offers</a><a href="#locations">Locations</a><a href="#why-us">Why Goldcar?</a>
+  </nav>
+
+  <main id="home">
+    <!-- HERO / BOOKING SECTION: main heading and car rental search form -->
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+        <h1>Find exactly what<br>you are looking for<span>.</span></h1>
+        <p class="hero-subtitle">Great cars, great prices and the freedom to explore.</p>
+      </div>
+
+      <!-- BOOKING FORM: pick-up office, dates, times, driver age and search -->
+      <form class="booking-card" id="bookingForm">
+        <label class="field-label" for="pickup">Pick-up office</label>
+        <input id="pickup" name="pickup" type="text" placeholder="⌖  Airport, city ..." required>
+        <label class="different-office"><input type="checkbox" id="differentOffice"> Return to a different office</label>
+        <div class="booking-grid">
+          <div class="form-field"><label for="pickupDate">Pick-up date</label><input id="pickupDate" type="date" required></div>
+          <div class="form-field"><label for="pickupTime">Pick-up time</label><input id="pickupTime" type="time" value="08:00" required></div>
+          <div class="form-field"><label for="returnDate">Return date</label><input id="returnDate" type="date" required></div>
+          <div class="form-field"><label for="returnTime">Return time</label><input id="returnTime" type="time" value="08:00" required></div>
+        </div>
+        <div class="return-location" id="returnLocationWrap" hidden>
+          <label for="returnLocation">Return office</label><input id="returnLocation" type="text" placeholder="Choose return office">
+        </div>
+        <fieldset class="age-picker"><legend>Driver's age:</legend>
+          <label><input type="radio" name="age" value="19-20"> <span>19–20</span></label>
+          <label><input type="radio" name="age" value="21-24"> <span>21–24</span></label>
+          <label><input type="radio" name="age" value="25+" checked> <span>+25</span></label>
+        </fieldset>
+        <button class="primary-button search-button" type="submit">⌕ &nbsp; Search</button>
+        <button class="clear-button" type="reset">⊗ &nbsp; Clear search</button>
+        <p class="form-message" id="formMessage" role="status"></p>
+      </form>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION: short company benefits and selling points -->
+    <section class="benefits section-wrap" id="why-us">
+      <div class="section-heading"><p class="eyebrow">THE GOLDCAR DIFFERENCE</p><h2>Car hire at the best price with Goldcar</h2>
+        <p>The best rent a car deals and offers. More than 100 destinations around the world are waiting for you. You can hire your vehicle with the guaranteed value for money. Find exactly what you are looking for.</p></div>
+      <div class="benefit-grid">
+        <article class="benefit"><div class="benefit-icon">◎</div><h3>Value for money guaranteed</h3><p>Great value for every journey.</p></article>
+        <article class="benefit"><div class="benefit-icon">◇</div><h3>Hassle-free. No small print</h3><p>Clear options and simple booking.</p></article>
+        <article class="benefit"><div class="benefit-icon">⌁</div><h3>Smart, all you need for less</h3><p>Easy services for your trip.</p></article>
+      </div>
+    </section>
+
+    <!-- PROMOTIONS SECTION: highlighted car hire deals and campaign cards -->
+    <section class="offers section-wrap" id="offers">
+      <div class="section-heading centered"><p class="eyebrow">TRAVEL MORE, SPEND LESS</p><h2>Discover our Car Hire Offers and Discounts</h2></div>
+      <div class="offer-grid">
+        <article class="offer-card offer-lime"><div class="offer-tag">KEY'N GO</div><p class="offer-kicker">FAST. EASY. NO WAITING.</p><h3>Grab your keys<br>in just two minutes.</h3><div class="key-illustration">▣</div><small>Super Relax included. Contactless.</small></article>
+        <article class="offer-card offer-photo"><div class="photo-shade"></div><div class="offer-caption"><span>SUPER RELAX COVER</span><h3>Enjoy a super<br>relaxing journey.</h3></div></article>
+        <article class="offer-card offer-dark"><p class="eyebrow">ONLY THE BEST DEALS</p><h3>It's going to be great!</h3><p>Incredible prices and more than 100 locations at your disposal.</p><a href="#bookingForm">Explore offers →</a></article>
+      </div>
+    </section>
+
+    <!-- TOP AGENCIES SECTION: promotional banner introducing car hire agencies -->
+    <section class="agency section-wrap">
+      <div class="agency-image" role="img" aria-label="View from inside a car"></div>
+      <div class="agency-copy"><p class="eyebrow">FIND YOUR NEXT RIDE</p><h2>Our Top Car Hire Agencies</h2><p>You know when and with who. Now where?</p></div>
+    </section>
+
+    <!-- AIRPORT LOCATIONS SECTION: grid of popular airport rental destinations -->
+    <section class="locations section-wrap" id="locations">
+      <div class="section-heading"><p class="eyebrow">PICK UP YOUR CAR</p><h2>Popular car hire locations</h2></div>
+      <div class="location-grid">
+        <a class="location-card" href="#bookingForm"><span class="location-symbol">◯</span><h3>Majorca Airport</h3><small>Spain · Balearic Islands</small></a>
+        <a class="location-card" href="#bookingForm"><span class="location-symbol">〰</span><h3>Alicante Airport</h3><small>Spain · Alicante</small></a>
+        <a class="location-card" href="#bookingForm"><span class="location-symbol">◒</span><h3>Barcelona Airport</h3><small>Spain · Barcelona</small></a>
+        <a class="location-card" href="#bookingForm"><span class="location-symbol">✣</span><h3>Gran Canaria Airport</h3><small>Spain · Canary Islands</small></a>
+        <a class="location-card" href="#bookingForm"><span class="location-symbol">△</span><h3>Malaga Airport</h3><small>Spain · Malaga</small></a>
+        <a class="location-card" href="#bookingForm"><span class="location-symbol">Ⅱ</span><h3>Madrid Airport</h3><small>Spain · Madrid</small></a>
+        <a class="location-card" href="#bookingForm"><span class="location-symbol">◇</span><h3>Lisbon Airport</h3><small>Portugal · Lisbon</small></a>
+        <a class="location-card" href="#bookingForm"><span class="location-symbol">◡</span><h3>Valencia Airport</h3><small>Spain · Valencia</small></a>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION: email subscription for deals and discounts -->
+    <section class="newsletter section-wrap">
+      <div><p class="eyebrow">ONLY THE BEST DEALS</p><h2>Get more from every journey</h2><p>Sign up to hear about special offers and car hire discounts.</p></div>
+      <form id="newsletterForm" class="newsletter-form"><label class="sr-only" for="email">Email address</label><input id="email" type="email" placeholder="Your email address" required><button class="primary-button" type="submit">Subscribe</button><p id="newsletterMessage" role="status"></p></form>
+    </section>
+
+    <!-- APP DOWNLOAD SECTION: mobile application promotion and store links -->
+    <section class="app-promo section-wrap">
+      <div class="phone-art" aria-hidden="true"><div class="phone"><div class="phone-screen"><b>Goldcar</b><span>Find your car</span><i></i><i></i><i></i></div></div><div class="phone phone-back"><div class="phone-screen"><b>Goldcar</b><i></i><i></i><i></i></div></div></div>
+      <div class="app-copy"><p class="eyebrow">YOUR TRIP IN YOUR POCKET</p><h2>Download our car hire app and find the cheapest rental car</h2><p>Explore deals and manage your booking wherever you go.</p><div class="store-links"><a href="https://www.apple.com/app-store/" target="_blank" rel="noreferrer"> App Store</a><a href="https://play.google.com/store" target="_blank" rel="noreferrer">▶ Google Play</a></div></div>
+    </section>
+  </main>
+
+  <!-- FOOTER SECTION: useful links, company information and legal links -->
+  <footer class="site-footer">
+    <div class="footer-main"><a class="brand footer-brand" href="#home">G<span>.</span></a><div><h3>Car hire</h3><a href="#locations">Airport locations</a><a href="#offers">Offers</a></div><div><h3>Information</h3><a href="#why-us">About Goldcar</a><a href="#bookingForm">Help with booking</a></div><div><h3>Follow your journey</h3><p>Find a car for your next adventure.</p></div></div>
+    <div class="footer-bottom"><span>© 2026 Goldcar demo website</span><div><a href="#home">Legal notice</a><a href="#home">Privacy policy</a><a href="#home">Cookies</a></div></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
